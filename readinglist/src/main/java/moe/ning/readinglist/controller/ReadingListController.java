@@ -22,7 +22,7 @@ public class ReadingListController
         this.readingListRepository = readingListRepository;
     }
 
-    @RequestMapping(value = "/{reader}", method = RequestMethod.GET)
+    @RequestMapping(value = "/readinglist/{reader}", method = RequestMethod.GET)
     public String readersBooks(@PathVariable("reader") String reader, Model model) {
         /* @PathVariable 是指从 url 中取值进行填充
          * 对比 @RequestParam 从 request 中取值
@@ -36,10 +36,10 @@ public class ReadingListController
         return "readingList";
     }
 
-    @RequestMapping(value = "/{reader}", method = RequestMethod.POST)
+    @RequestMapping(value = "/readinglist/{reader}", method = RequestMethod.POST)
     public String addToReadingList(@PathVariable("reader") String reader, Book book) {
         book.setReader(reader);
         readingListRepository.save(book); //持久化
-        return "redirect:/{reader}";
+        return "redirect:/readinglist/{reader}";
     }
 }

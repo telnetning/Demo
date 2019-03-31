@@ -9,6 +9,7 @@
     <h2>Your Reading List</h2>
     <div th:unless="${#lists.isEmpty(books)}">
         <dl th:each="book : ${books}">
+            <span th:text="${book.reader}">Reader</span>
             <dt class="bookHeadline">
                 <span th:text="${book.title}">Title</span>
                 <span th:text="${book.author}">Author</span>
