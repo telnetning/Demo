@@ -42,4 +42,9 @@ public class ReadingListController
         readingListRepository.save(book); //持久化
         return "redirect:/readinglist/{reader}";
     }
+
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login() {
+        return "login";
+    }
 }
