@@ -5,5 +5,7 @@ spring boot HelloWorld Project.
 A reading Demo with spring boot
 #### wolfcode
 Wolfcode learning spring boot
-#### springMybatis
-Spring Boot + Mybatis 
+#### sbmr
+Spring Boot + Mybatis + Restful
+#### javaMultiThread
+Java Multi Thread examples
