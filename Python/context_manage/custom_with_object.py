@@ -14,7 +14,7 @@ with custom_handler("worker001") as ch:  # ch is result of __enter__()
     print("Do some task")
     raise Exception("Exception by myself.")
 
-'''
+'''OUTPUT
 Enter worker001
 Do some task
 Exception: Exception by myself.
