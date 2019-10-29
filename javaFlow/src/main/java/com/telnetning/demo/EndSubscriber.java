@@ -28,6 +28,9 @@ public class EndSubscriber<T> implements Flow.Subscriber<T>
         subscription.request(1);
     }
 
+    /*
+     * Subscriber 自己决定请求的数据量大小
+     */
     @Override
     public void onNext(T item) {
         howMuchMessagesConsume.decrementAndGet();
