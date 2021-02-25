@@ -43,6 +43,7 @@ int uthread_create(schedule_t &schedule, Fun func, void *arg) {
     return id;
 }
 
+/* use this to find func called within ucontext*/
 void uthread_body(schedule_t *ps) 
 {
     int id = ps->running_threading;
@@ -67,6 +68,7 @@ void uthread_resume(schedule_t *schedule, int id)
     }
 }
 
+/* swap back to schedule main */
 void thread_yield(schedule_t *schedule) 
 {
     if(schedule.ruinning_thread != -1) {
@@ -79,6 +81,7 @@ void thread_yield(schedule_t *schedule)
 
 }
 
+/* to detemine if all ucontext run out already */
 int schedule_finished(const schedule_t *schedule)
 {
     if(schedule.running_threading != -1) {
