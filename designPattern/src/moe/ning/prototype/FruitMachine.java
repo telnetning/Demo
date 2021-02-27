@@ -46,7 +46,9 @@ public class FruitMachine
 
     public static void main(String[] args)
     {
+        System.out.println("***************");
         System.out.println("Machine start:");
+        System.out.println("***************");
         FruitMachine appleMachine = new FruitMachine(new Apple());
         FruitMachine orangeMachine = new FruitMachine(new Orange());
         FruitMachine bananaMachine = new FruitMachine(new Banana());
@@ -64,5 +66,8 @@ public class FruitMachine
                 bananaMachine.makeFruit().descript();
             }
         }
+        System.out.println("***************");
+        System.out.println("Machine end.");
+        System.out.println("***************");
     }
 }
